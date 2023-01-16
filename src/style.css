@@ -38,6 +38,10 @@ body {
   align-items: center;
 }
 
+a{
+  text-decoration: none;
+}
+
 .navbar-elements{
   width: 60vw;
   display: flex;
@@ -164,6 +168,14 @@ body {
   border-bottom: 2px solid var(--color-2);
 }
 
+.menu-section:nth-child(even){
+  flex-direction: row;
+}
+.menu-section:nth-child(odd){
+  flex-direction: row-reverse;
+}
+
+
 .menu-section .products {
   width: 15rem;
   font-family: adam-font-regular;
@@ -207,7 +219,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -222,27 +234,27 @@ body {
 }
 
 /* Footer Style is common for both menu and contact page */
-#content-menu ,#content-contact .logo-container{
+#content-menu  .logo-container, #content-contact .logo-container{
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
 }
 
-#content-menu ,#content-contact .logo-container #logo{
+#content-menu .logo-container #logo,#content-contact .logo-container #logo{
   height: 10vh;
   min-height: 2.5rem;
   margin-top: 0.1rem;
   vertical-align: bottom;
 }
 
-#content-menu ,#content-contact .footer {
+#content-menu .footer ,#content-contact .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
 }
 
-#content-menu ,#content-contact .footer .contact{
+#content-menu .footer .contact ,#content-contact .footer .contact{
   display: flex;
   gap: 0.2rem;
   flex-direction: column;
@@ -251,11 +263,16 @@ body {
   margin-right: 5rem;
 }
 
-#content-menu ,#content-contact .footer .contact h4{
+#content-menu .footer .contact h4 ,#content-contact .footer .contact h4{
   margin: 0;
   letter-spacing: 0.2rem;
+  font-family: adam-font-regular;
+  letter-spacing: 0.5rem;
+  font-size: 1.3rem;
+  color: var(--color-2);
+  align-self: center;
 }
-#content-menu ,#content-contact .footer .contact span, h4{
+#content-menu .footer .contact span ,#content-contact .footer .contact span{
   font-family: adam-font-regular;
   letter-spacing: 0.5rem;
   font-size: 1.3rem;
