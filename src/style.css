@@ -40,6 +40,7 @@ body {
 
 a{
   text-decoration: none;
+  color: inherit;
 }
 
 .navbar-elements{
@@ -301,7 +302,7 @@ a{
   width: 20vw;
 
   font-family: adam-font-regular;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--color-3);
   
   display: flex;
@@ -312,6 +313,14 @@ a{
 
   border-right: 1px solid #F4F0E880;
 
+}
+
+#content-contact .content-body .contact-section-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0.5rem;
 }
 
 #content-contact .content-body .location img{

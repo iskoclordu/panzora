@@ -3,6 +3,8 @@ import './style.css';
 import logo from './images/logo.png';
 // eslint-disable-next-line import/no-cycle
 import callMenuPage from './menu';
+// eslint-disable-next-line import/no-cycle
+import callContactPage from './contact';
 
 function createNavBar(id) {
   const mainContainer = document.getElementById(id);
@@ -53,6 +55,7 @@ function createNavBar(id) {
   // eslint-disable-next-line no-use-before-define
   home.addEventListener('click', callHomePage);
   menu.addEventListener('click', callMenuPage);
+  contact.addEventListener('click', callContactPage);
 }
 
 function createContentHome() {
