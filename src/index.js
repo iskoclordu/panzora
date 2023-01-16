@@ -100,6 +100,8 @@ function callHomePage() {
   createFooterHome();
 }
 
+callHomePage();
+
 export {
   callHomePage,
   createNavBar,
