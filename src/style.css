@@ -1,5 +1,393 @@
+:root{
+  --color-1:#171616;
+  --color-2:#9B2336;
+  --color-3:#F4F0E8;
+}
+
+@font-face {
+  font-family: logo-font;
+  src: url(./fonts/Belleza-Regular.ttf);
+}
+
+@font-face {
+  font-family: adam-font-light;
+  src: url(./fonts/Adam-Light.ttf);
+}
+@font-face {
+  font-family: adam-font-bold;
+  src: url(./fonts/Adam-Bold.ttf);
+}
+
+@font-face {
+  font-family: adam-font-regular;
+  src: url(./fonts/Adam-Medium.ttf);
+}
+
+/* Common Styles for All pages*/
 body {
   height: 100vh;
-  width:100vw;
-  background-color: aqua;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-container{
+  background-color: #9b2335a6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-elements{
+  width: 60vw;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.navbar-elements div{
+  height: 3.2rem;
+  box-sizing: border-box;
+}
+
+.navbar-elements div:hover{
+  box-sizing: border-box;
+  border-bottom: 2px solid var(--color-3);  
+}
+
+.navbar-elements h3{
+  margin: 0.6rem;
+  font-family: adam-font-regular;
+  font-size: 2rem;
+  color: var(--color-3);
+}
+
+/* Home Page Styles*/
+
+#content-home {
+  height: 100%;
+  width: 100%;
+  background: no-repeat url("../src/images/home-background.jpg");
+  background-size: cover;
+
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+}
+
+#content-home .content-body{
+  position:relative;
+}
+
+#content-home .logo-container{
+  height: max-content;
+  width: 40vw;
+  max-width: 45rem;
+  min-width: min-content;
+  background-color: #f4f0e8bd;
+  padding: 0;
+  position: relative;
+  right: 0;
+  top: 35%;
+  margin-left: auto;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+#content-home .logo-container #logo{
+  height: 20vh;
+  min-height: 4rem;
+  margin-top: 1rem;
+  margin-right: 4rem;
+  vertical-align: bottom;
+}
+
+#content-home .footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content-home .footer {
+  background-color: #171616bd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding:0.5rem 1rem;
+}
+
+#content-home .footer span{
+  font-family: adam-font-regular;
+  letter-spacing: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-3);
+}
+
+/* Menu Page Styles*/
+
+#content-menu, #content-contact {
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-3);
+}
+
+#content-menu, #content-contact {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+}
+
+#content-menu .content-body{
+  width: 60vw;
+  min-width: 690px;
+  overflow-y: auto;
+  margin: 0 auto;
+  background-color: #171616bd;
+
+  padding: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 3rem;
+}
+
+.menu-section{
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2px auto;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-2);
+}
+
+.menu-section .products {
+  width: 15rem;
+  font-family: adam-font-regular;
+  color: var(--color-3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.products h2{
+  font-family: adam-font-bold;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  color: var(--color-2);
+  border-bottom: 2px solid var(--color-2);
+  padding-top: 0.2rem;
+  margin: 0;
+  background-color: #f4f0e86b;
+}
+.products .menu-row{
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+.products .menu-row .name{
+  font-family: inherit;
+  font-size: 1.2rem;
+  flex: 1;
+}
+
+.products .price{
+  font-family: inherit;
+  font-size: 1.3rem;
+}
+
+.menu-section .image img{
+  height: 15rem;
+  width: 15rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-2); 
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-2);
+  position: relative;
+  box-shadow: inset 1px 0 1px 0.5px #f4f0e844; 
+}
+
+/* Footer Style is common for both menu and contact page */
+#content-menu ,#content-contact .logo-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+#content-menu ,#content-contact .logo-container #logo{
+  height: 10vh;
+  min-height: 2.5rem;
+  margin-top: 0.1rem;
+  vertical-align: bottom;
+}
+
+#content-menu ,#content-contact .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+#content-menu ,#content-contact .footer .contact{
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5rem;
+}
+
+#content-menu ,#content-contact .footer .contact h4{
+  margin: 0;
+  letter-spacing: 0.2rem;
+}
+#content-menu ,#content-contact .footer .contact span, h4{
+  font-family: adam-font-regular;
+  letter-spacing: 0.5rem;
+  font-size: 1.3rem;
+  color: var(--color-2);
+  align-self: center;
+}
+
+/* Contact Page */
+
+#content-contact .content-body{
+  width: 60vw;
+  min-width: 690px;
+  overflow-y: auto;
+  margin: 0 auto;
+  background-color: #171616bd;
+
+  padding: 0.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+
+#content-contact .content-body .contact-section{
+  width: 20vw;
+
+  font-family: adam-font-regular;
+  font-size: 1.5rem;
+  color: var(--color-3);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 3rem;
+
+  border-right: 1px solid #F4F0E880;
+
+}
+
+#content-contact .content-body .location img{
+  width: 25vw;
+  height: auto;
+  border-radius: 2px;
+  margin-left: 3rem;
+}
+
+.customer-form{
+  padding-right: 0.5rem;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.customer-form input[type='text'],
+.customer-form input[type='email']{
+  box-sizing: border-box;
+  font-family: inherit;
+  background-color: var(--color-3);
+  border: 1px solid var(--color-1);
+  border-radius: 2px;
+  width: 100%;
+  padding: 7px;
+  font: 0.8rem;
+}
+
+/* .customer-form .form-row input[type='text']:invalid,
+.customer-form .form-row input[type='email']:invalid {
+  border: 1px solid var(--color-2);
+  box-shadow: 0 0 2px 2px var(--color-2);
+} */
+
+.customer-form textarea{
+  font-family: inherit;
+  font-size: 1rem;
+
+  box-sizing: border-box;
+  border: 1px solid var(--color-1);
+  border-radius: 2px;
+
+  background-color: var(--color-3);
+
+  height: 7rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 7px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.customer-form  .text{
+  color: var(--color-3);
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.customer-form ::-webkit-scrollbar {
+  width: 5px;
+}
+
+.customer-form ::-webkit-scrollbar-thumb {
+  background: var(--color-2); 
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-2);
+  position: relative;
+  box-shadow: inset 1px 0 1px 0.5px #f4f0e844; 
+}
+
+.customer-form button{
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+
+  color: var(--color-3);
+  background-color:var(--color-2);
+
+  border: none;
+  border-radius: 2px;
+
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+.customer-form button:hover{
+  scale: 1.02;
+}
+
+.customer-form button:active{
+  transition: 0.2s;
+  scale: 0.98;
 }
