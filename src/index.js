@@ -1,9 +1,8 @@
+/* eslint-disable import/no-cycle */
 /* eslint-disable no-script-url */
 import './style.css';
 import logo from './images/logo.png';
-// eslint-disable-next-line import/no-cycle
 import callMenuPage from './menu';
-// eslint-disable-next-line import/no-cycle
 import callContactPage from './contact';
 
 function createNavBar(id) {
@@ -16,37 +15,25 @@ function createNavBar(id) {
   navBarElements.classList.add('navbar-elements');
   navBarContainer.appendChild(navBarElements);
 
-  const aHome = document.createElement('a');
-  aHome.setAttribute('href', 'javascript:callHomePage()');
-  navBarElements.appendChild(aHome);
-
   const home = document.createElement('div');
   home.classList.add('home');
-  aHome.appendChild(home);
+  navBarElements.appendChild(home);
 
   const homeText = document.createElement('h3');
   homeText.innerHTML = 'HOME';
   home.appendChild(homeText);
 
-  const aMenu = document.createElement('a');
-  aMenu.setAttribute('href', 'javascript:callMenuPage()');
-  navBarElements.appendChild(aMenu);
-
   const menu = document.createElement('div');
   menu.classList.add('menu');
-  aMenu.appendChild(menu);
+  navBarElements.appendChild(menu);
 
   const menuText = document.createElement('h3');
   menuText.innerHTML = 'MENU';
   menu.appendChild(menuText);
 
-  const aContact = document.createElement('a');
-  aContact.setAttribute('href', 'javascript:callContactPage()');
-  navBarElements.appendChild(aContact);
-
   const contact = document.createElement('div');
   contact.classList.add('contact');
-  aContact.appendChild(contact);
+  navBarElements.appendChild(contact);
 
   const contactText = document.createElement('h3');
   contactText.innerHTML = 'CONTACT';
